@@ -1,0 +1,16 @@
+[
+  {
+    "item_info_id":1,
+    "name":"포션",
+    "price":200,
+    "payment_method":"gold",
+    "description":"포션을 사용하면 체력이 100 회복됩니다."
+  },
+  {
+    "item_info_id":2,
+    "name":"마나포션",
+    "price":1000,
+    "payment_method":"gold",
+    "description":"마나 포션을 사용하면 마나가 200 회복됩니다."
+  }
+]
