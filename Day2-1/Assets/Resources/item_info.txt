@@ -7,6 +7,13 @@
     "description":"포션을 사용하면 체력이 100 회복됩니다."
   },
   {
+    "item_info_id":3,
+    "name":"단검",
+    "price":3000,
+    "payment_method":"gold",
+    "description":"공격력 10의 단검"
+  },
+  {
     "item_info_id":2,
     "name":"마나포션",
     "price":1000,

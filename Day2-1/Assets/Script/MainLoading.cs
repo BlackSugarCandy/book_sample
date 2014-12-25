@@ -9,6 +9,14 @@ public class MainLoading : MonoBehaviour {
 
 		Load ();
 
+		PrintItem();
+
+		PrintList();
+
+		SortList();
+		
+		PrintList();
+
 	}
 	
 	// Update is called once per frame
@@ -34,4 +42,32 @@ public class MainLoading : MonoBehaviour {
 
 
 	}
+
+	public void PrintItem()
+	{
+
+		ItemInfo item1 = Singleton.Instance.ItemInfoList.Find(x=>x.item_info_id == 1);
+
+		Debug.Log("name : " + item1.name);
+
+
+	}
+
+	public void PrintList()
+	{
+		foreach(var item in Singleton.Instance.ItemInfoList){
+			Debug.Log (item.name);
+		}
+	}
+
+	public void SortList()
+	{
+		Singleton.Instance.ItemInfoList.Sort(delegate(ItemInfo x, ItemInfo y) {
+			if(x.item_info_id < y.item_info_id) return -1;
+			else if(x.item_info_id > y.item_info_id) return 1;
+			else return 0;
+		});
+
+	}
+
 }
