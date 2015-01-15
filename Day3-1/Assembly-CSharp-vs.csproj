@@ -61,6 +61,7 @@
      <Compile Include="Assets\JNMTouchControls\Scripts\IPlayer.cs" />
      <Compile Include="Assets\JNMTouchControls\Scripts\PlayerController2.cs" />
      <Compile Include="Assets\JNMTouchControls\Scripts\Stick.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyMove.cs" />
      <None Include="Assets\Blade_girl\Shader\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Slime\ReadMe.txt" />
      <None Include="Assets\Blade_girl\Shader\Toon Shading\Sources\Shaders\Toony-BasicOutline.shader" />
