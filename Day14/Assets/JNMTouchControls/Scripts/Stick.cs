@@ -72,6 +72,11 @@ public class Stick : MonoBehaviour {
 	{
 		Debug.Log ("SkillDown");
 		_player.OnSkillDown();
+
+		
+		// 
+		DialogDataAlert data = new DialogDataAlert ("다이얼로그 타이틀", "다이얼로그 내용");
+		DialogManager.Instance.Push (data);
 	}
 	
 	public void SkillUp()

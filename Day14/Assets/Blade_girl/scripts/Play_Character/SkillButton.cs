@@ -31,7 +31,6 @@ public class SkillButton : MonoBehaviour {
 	private void OnMouseDown()
 	{
 		avatar.SetBool("Skill", true);
-		
 	}
 
 	private void OnMouseUp()
