@@ -51,8 +51,10 @@
      <Compile Include="Assets\Blade_girl\scripts\Common\loadLevelbutton.cs" />
      <Compile Include="Assets\Blade_girl\scripts\Dialog\DialogController.cs" />
      <Compile Include="Assets\Blade_girl\scripts\Dialog\DialogControllerAlert.cs" />
+     <Compile Include="Assets\Blade_girl\scripts\Dialog\DialogControllerConfirm.cs" />
      <Compile Include="Assets\Blade_girl\scripts\Dialog\DialogData.cs" />
      <Compile Include="Assets\Blade_girl\scripts\Dialog\DialogDataAlert.cs" />
+     <Compile Include="Assets\Blade_girl\scripts\Dialog\DialogDataConfirm.cs" />
      <Compile Include="Assets\Blade_girl\scripts\Dialog\DialogManager.cs" />
      <Compile Include="Assets\Blade_girl\scripts\Play_Character\Effect_Destroy.cs" />
      <Compile Include="Assets\Blade_girl\scripts\Play_Character\FollowingCamera.cs" />

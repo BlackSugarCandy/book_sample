@@ -76,7 +76,18 @@ public class Stick : MonoBehaviour {
 		
 		// 
 		DialogDataAlert data = new DialogDataAlert ("다이얼로그 타이틀", "다이얼로그 내용");
-		DialogManager.Instance.Push (data);
+		//DialogManager.Instance.Push (data);
+
+		DialogDataConfirm dat2 = new DialogDataConfirm ("타이틀2", "메세지", 
+		    delegate(bool answer){
+				if(answer){
+				Debug.Log("positiv");
+			}else{
+				Debug.Log("negativ");
+				}
+			}	
+		);
+		DialogManager.Instance.Push (dat2);
 	}
 	
 	public void SkillUp()
