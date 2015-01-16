@@ -46,13 +46,9 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Blade_girl\scripts\Common\Effect.cs" />
      <Compile Include="Assets\Blade_girl\scripts\Common\Intro_GuiButton.cs" />
      <Compile Include="Assets\Blade_girl\scripts\Common\loadLevelbutton.cs" />
-     <Compile Include="Assets\Blade_girl\scripts\Play_Character\Effect_Destroy.cs" />
-     <Compile Include="Assets\Blade_girl\scripts\Play_Character\FollowingCamera.cs" />
      <Compile Include="Assets\Blade_girl\scripts\Play_Character\Index.cs" />
-     <Compile Include="Assets\Blade_girl\scripts\Play_Character\MineBot.cs" />
      <Compile Include="Assets\Blade_girl\scripts\Play_Character\SkillButton.cs" />
      <Compile Include="Assets\Blade_girl\scripts\View_Animation\MaterialChange.cs" />
      <Compile Include="Assets\Blade_girl\scripts\View_Animation\characterButton.cs" />
@@ -61,6 +57,10 @@
      <Compile Include="Assets\JNMTouchControls\Scripts\IPlayer.cs" />
      <Compile Include="Assets\JNMTouchControls\Scripts\PlayerController2.cs" />
      <Compile Include="Assets\JNMTouchControls\Scripts\Stick.cs" />
+     <Compile Include="Assets\Scripts\Chracter\Effect.cs" />
+     <Compile Include="Assets\Scripts\Chracter\Effect_Destroy.cs" />
+     <Compile Include="Assets\Scripts\Chracter\FollowingCamera.cs" />
+     <Compile Include="Assets\Scripts\Chracter\MineBot.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyMove.cs" />
      <None Include="Assets\Blade_girl\Shader\Toon Shading\Sources\Shaders\Toony-Basic.shader" />
      <None Include="Assets\Slime\ReadMe.txt" />
