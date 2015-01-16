@@ -30,7 +30,7 @@ public sealed class DialogManager
 		_dialogQueue = new List<DialogData>();
 		_dialogMap = new Dictionary<DialogType, DialogController>();
 
-        Prepare();
+        //Prepare();
     }
 
 	public void Prepare()
@@ -48,7 +48,8 @@ public sealed class DialogManager
 	}
 
     public void Push(DialogData data)
-    {
+	{
+		Debug.Log("PUSH");
 		_dialogQueue.Add(data);
 
         if (_currentDialog == null)
