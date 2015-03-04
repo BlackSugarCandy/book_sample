@@ -40,6 +40,7 @@ public class DialogControllerAlert : DialogController
     public void OnClickOK()
     {
         // calls child's callback
+		Debug.Log ("On Click OK on Alert Dialogs");
         if (Data!=null && Data.Callback != null)
             Data.Callback();
 

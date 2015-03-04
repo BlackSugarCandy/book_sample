@@ -1,9 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Blade_girl\scripts\Dialog\DialogControllerConfirm.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Blade_girl\scripts\Dialog\DialogControllerAlert.cs">
     <Files>
-      <File FileName="Assets\JNMTouchControls\Scripts\Stick.cs" Line="81" Column="13" />
-      <File FileName="Assets\Blade_girl\scripts\Dialog\DialogControllerConfirm.cs" Line="49" Column="1" />
+      <File FileName="Assets\JNMTouchControls\Scripts\Stick.cs" Line="90" Column="5" />
+      <File FileName="Assets\Blade_girl\scripts\Dialog\DialogControllerConfirm.cs" Line="42" Column="1" />
+      <File FileName="Assets\Blade_girl\scripts\Dialog\DialogController.cs" Line="61" Column="5" />
+      <File FileName="Assets\Blade_girl\scripts\Dialog\DialogManager.cs" Line="83" Column="21" />
+      <File FileName="Assets\Blade_girl\scripts\Dialog\DialogDataAlert.cs" Line="3" Column="1" />
+      <File FileName="Assets\Blade_girl\scripts\Dialog\DialogControllerAlert.cs" Line="40" Column="25" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
