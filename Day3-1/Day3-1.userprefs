@@ -1,13 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/JNMTouchControls/Scripts/Stick.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="../Day5/Assets/Scripts/Player/PlayerHealth.cs">
     <Files>
-      <File FileName="Assets/JNMTouchControls/Scripts/Stick.cs" Line="167" Column="12" />
-      <File FileName="Assets/Blade_girl/scripts/Play_Character/MineBot.cs" Line="49" Column="4" />
-      <File FileName="Assets/Blade_girl/scripts/Play_Character/FollowingCamera.cs" Line="7" Column="56" />
-      <File FileName="Assets/JNMTouchControls/Scripts/FollowCamera2.cs" Line="7" Column="27" />
-      <File FileName="Assets/JNMTouchControls/Scripts/PlayerController2.cs" Line="119" Column="25" />
-      <File FileName="Assets/JNMTouchControls/Scripts/IPlayer.cs" Line="30" Column="1" />
+      <File FileName="Assets/Scripts/Player/PlayerAttack.cs" Line="14" Column="2" />
+      <File FileName="Assets/Scripts/Player/NormalTarget.cs" Line="7" Column="35" />
+      <File FileName="Assets/CompleteProject/Scripts/Chracter/PlayerMovement.cs" Line="15" Column="3" />
+      <File FileName="Assets/CompleteProject/Scripts/Chracter/PlayerAttack.cs" Line="15" Column="3" />
+      <File FileName="../Day5/Assets/Scripts/Player/PlayerHealth.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
