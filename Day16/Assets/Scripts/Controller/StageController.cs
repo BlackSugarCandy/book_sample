@@ -14,6 +14,8 @@ public class StageController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		
+		SignIn ();
 
 		Instance = this;
 		DialogDataAlert alert = new DialogDataAlert("START", "Game Start!", delegate() {
@@ -22,20 +24,6 @@ public class StageController : MonoBehaviour {
 
 		DialogManager.Instance.Push(alert);
 
-		
-		Dictionary<string, string> param = new Dictionary<string, string>();
-		param.Add("FacebookID", "9876");
-		param.Add("FacebookName", "Chris");
-		param.Add("FacebookPhotoURL", "http://www/1.jpg");
-
-		HTTPClient.Instance.POST (
-			"http://unity-action.azurewebsites.net//Login",
-			param,
-		    delegate(WWW obj) {
-				JSONObject json = JSONObject.Parse(obj.text);
-				Debug.Log("Response is : " + json.ToString());
-			}
-		);
 	}
 
 	public void AddPoint(int Point)
@@ -56,21 +44,59 @@ public class StageController : MonoBehaviour {
 			delegate(WWW obj) {
 			JSONObject json = JSONObject.Parse(obj.text);
 			Debug.Log("Response is : " + json.ToString());
+
+			GetRanking();
+
 		});
 
-		string rankings = "this is rankings";
+	}
 
-		DialogDataRanking ranking = new DialogDataRanking("Game Over", StagePoint, rankings, delegate(bool yn) {
-			if(yn)
-			{
-				Debug.Log ("OK Pressed");
-				Application.LoadLevel (Application.loadedLevel); // 
-			}else{
-				Debug.Log ("Cancel Pressed");
-				Application.Quit();
+	private void SignIn(){
+
+		Dictionary<string, string> param = new Dictionary<string, string>();
+		param.Add("FacebookID", "9876");
+		param.Add("FacebookName", "Chris");
+		param.Add("FacebookPhotoURL", "http://www/1.jpg");
+		
+		HTTPClient.Instance.POST (
+			"http://unity-action.azurewebsites.net//Login",
+			param,
+			delegate(WWW obj) {
+			JSONObject json = JSONObject.Parse(obj.text);
+			Debug.Log("Response is : " + json.ToString());
+		}
+		);
+
+	}
+
+	// Get Ranking list From server
+	private void GetRanking(){
+		HTTPClient.Instance.GET (
+			"http://unity-action.azurewebsites.net//Total/1/50",
+			new Dictionary<string, string>(),
+			delegate(WWW obj) {
+				
+				// Dialog Push
+				JSONArray jarr = JSONArray.Parse(obj.text);
+			
+				string rankings = "";
+				for(int i=0;i<jarr.Length;i++){
+					rankings += jarr[i].Obj.GetString("Rank") + ". " + jarr[i].Obj.GetString("FacebookName") + " \t\tscore :" + jarr[i].Obj.GetString("Point") + "\n\n";
+				}
+				
+				DialogDataRanking ranking = new DialogDataRanking("Game Over", StagePoint, rankings, delegate(bool yn) {
+					if(yn)
+					{
+						Debug.Log ("OK Pressed");
+						Application.LoadLevel (Application.loadedLevel); // 
+					}else{
+						Debug.Log ("Cancel Pressed");
+						Application.Quit();
+					}
+				});
+				DialogManager.Instance.Push(ranking);
 			}
-		});
-		DialogManager.Instance.Push(ranking);
+		);
 
 	}
 
