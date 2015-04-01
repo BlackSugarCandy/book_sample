@@ -1,0 +1,6 @@
+{
+"ios_ver":1.00,
+"aos_ver":1.00,
+"android":"/android.json",
+"iOS":"/ios.json"
+}
