@@ -79,6 +79,7 @@
      <None Include="Assets\Plugins\Android\facebook\res\values\drawables.xml" />
      <None Include="Assets\Plugins\Boomlagoon\JSON\Readme.txt" />
      <None Include="Assets\Plugins\Android\facebook\res\values-iw\strings.xml" />
+     <None Include="Assets\Resources\Text\Config.txt" />
      <None Include="Assets\Plugins\Android\facebook\build.xml" />
      <None Include="Assets\Shader\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />
      <None Include="Assets\Shader\Toon Shading\Sources\Shaders\Toony-Lighted.shader" />
@@ -92,6 +93,7 @@
      <None Include="Assets\Plugins\Android\facebook\res\values\attrs.xml" />
      <None Include="Assets\Plugins\Android\facebook\res\layout\com_facebook_picker_checkbox.xml" />
      <None Include="Assets\Plugins\Android\facebook\res\drawable\com_facebook_loginbutton_silver.xml" />
+     <None Include="Assets\Resources\Text\Language.txt" />
      <None Include="Assets\Plugins\Android\facebook\bin\proguard.txt" />
      <None Include="Assets\Plugins\Android\facebook\res\values-ldpi\dimens.xml" />
      <None Include="Assets\Plugins\Android\facebook\AndroidManifest.xml" />
