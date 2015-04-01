@@ -76,7 +76,9 @@
      <None Include="Assets\Plugins\Android\facebook\res\layout\com_facebook_picker_title_bar_stub.xml" />
      <None Include="Assets\Blade_girl\ReadMe_[V 2. 6]_10_04.txt" />
      <None Include="Assets\Plugins\Android\facebook\res\values\drawables.xml" />
+     <None Include="Assets\Plugins\Boomlagoon\JSON\Readme.txt" />
      <None Include="Assets\Plugins\Android\facebook\res\values-iw\strings.xml" />
+     <None Include="Assets\Resources\Text\Config.txt" />
      <None Include="Assets\Plugins\Android\facebook\build.xml" />
      <None Include="Assets\Shader\Toon Shading\Sources\Shaders\Toony-LightedOutline.shader" />
      <None Include="Assets\Shader\Toon Shading\Sources\Shaders\Toony-Lighted.shader" />
@@ -90,6 +92,7 @@
      <None Include="Assets\Plugins\Android\facebook\res\values\attrs.xml" />
      <None Include="Assets\Plugins\Android\facebook\res\layout\com_facebook_picker_checkbox.xml" />
      <None Include="Assets\Plugins\Android\facebook\res\drawable\com_facebook_loginbutton_silver.xml" />
+     <None Include="Assets\Resources\Text\Language.txt" />
      <None Include="Assets\Plugins\Android\facebook\bin\proguard.txt" />
      <None Include="Assets\Plugins\Android\facebook\res\values-ldpi\dimens.xml" />
      <None Include="Assets\Plugins\Android\facebook\AndroidManifest.xml" />
@@ -102,6 +105,10 @@
  <Reference Include="IFacebook">
  <HintPath>D:/Workspace/book_sample/Day13/Assets/Facebook/Scripts/IFacebook.dll</HintPath>
  </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{9EFF0A63-F030-BEA5-32B3-ADDB7DFFC6B8}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
