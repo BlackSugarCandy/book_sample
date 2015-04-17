@@ -27,84 +27,30 @@ public class HTTPClient : MonoBehaviour {
 			return _instance;
 		}
 	}
-	
-	// Use this for initialization
-	void Start () {
-		
+
+	public void GET(string url, Action<WWW> callback) {
+
+		WWW www = new WWW(url);
+		StartCoroutine(WaitWWW(www, callback));
+
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
+	public void POST(string url, string input, Action<WWW> callback) {
+
+		Dictionary<string, string> headers = new Dictionary<string, string>();
+		headers.Add("Content-Type", "application/json");
+		byte[] body = Encoding.UTF8.GetBytes(input);
+
+		WWW www = new WWW(url, body, headers);
+
+		StartCoroutine(WaitWWW(www, callback));
+
 	}
-	
-	public WWW BuildWWWGET(string url, Dictionary<string, string> parameter) {
-		StringBuilder stringBuilder = new StringBuilder (url);
-		if (parameter.Count > 0) {
-			stringBuilder.Append("?");
-			foreach (KeyValuePair<string, string> arg in parameter) { 
-				stringBuilder.Append(arg.Key);
-				stringBuilder.Append("=");
-				stringBuilder.Append(arg.Value);
-				stringBuilder.Append("&");
-			}
-			stringBuilder.Remove( stringBuilder.Length - 1, 1 );
-		}
-		
-		WWW www = new WWW( stringBuilder.ToString() );
-		return www;
-	}
-	
-	public WWW BuildWWWPOST(string url, Dictionary<string, string> parameter) {
-		WWWForm form = new WWWForm(); 
-		foreach (KeyValuePair<string, string> post_arg in parameter) { 
-			form.AddField(post_arg.Key, post_arg.Value); 	
-		}
-		
-		WWW www = new WWW( url, form );
-		return www;
-	}
-	
-	public IEnumerator GET(string url, Dictionary<string, string> parameter, HTTPResponse response) {
-		HTTPRequest req = new HTTPRequest();
-		req.WWW = BuildWWWGET( url, parameter );
-		req.Callback = delegate(WWW obj) {
-			response.Content = obj.text;
-		};
-		
-		yield return StartCoroutine( WaitForRequest( req ) );
-	}
-	
-	public void GET(string url, Dictionary<string, string> parameter, Action<WWW> callback) {
-		HTTPRequest req = new HTTPRequest();
-		req.WWW = BuildWWWGET( url, parameter );
-		req.Callback = callback;
-		
-		StartCoroutine( WaitForRequest( req ) );
-	}
-	
-	public void POST(string url, Dictionary<string, string> parameter, Action<WWW> callback) {
-		HTTPRequest req = new HTTPRequest();
-		req.WWW = BuildWWWPOST( url, parameter );
-		req.Callback = callback;
-		
-		StartCoroutine( WaitForRequest( req ) );
-	}
-	
-	private IEnumerator WaitForRequest(HTTPRequest req)
+
+	public IEnumerator WaitWWW(WWW www, Action<WWW> callback)
 	{
-		WWW www = req.WWW;
 		yield return www;
-		
-		req.Callback( req.WWW );
+		callback(www);
 	}
-	
-	public class HTTPRequest {
-		public WWW WWW { get; set; }
-		public Action<WWW> Callback { get; set; }
-	}
-	
-	public class HTTPResponse {
-		public string Content { get; set; }
-	}
+
 }

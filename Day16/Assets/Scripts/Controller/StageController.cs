@@ -15,8 +15,6 @@ public class StageController : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		
-		SignIn ();
-
 		Instance = this;
 		DialogDataAlert alert = new DialogDataAlert("START", "Game Start!", delegate() {
 			Debug.Log ("OK Pressed");
@@ -34,46 +32,46 @@ public class StageController : MonoBehaviour {
 
 	public void FinishGame()
 	{
-		Dictionary<string, string> param = new Dictionary<string, string>();
-		param.Add("UserID", "9876");
-		param.Add("Point", StagePoint.ToString());
+		JSONObject body = new JSONObject();
+		body.Add("UserID", "9876");
+		body.Add("Point", StagePoint.ToString());
 		
 		HTTPClient.Instance.POST (
-			"http://unity-action.azurewebsites.net//UpdateResult",
-			param,
+			"http://unity-action.azurewebsites.net/UpdateResult",
+			body.ToString(),
 			delegate(WWW obj) {
-			JSONObject json = JSONObject.Parse(obj.text);
-			Debug.Log("Response is : " + json.ToString());
+				JSONObject json = JSONObject.Parse(obj.text);
+				Debug.Log("Response is : " + json.ToString());
 
-			GetRanking();
+				GetRanking();
 
-		});
+		    }
+		);
 
 	}
-
+	/*
 	private void SignIn(){
 
-		Dictionary<string, string> param = new Dictionary<string, string>();
-		param.Add("FacebookID", "9876");
-		param.Add("FacebookName", "Chris");
-		param.Add("FacebookPhotoURL", "http://www/1.jpg");
+		JSONObject body = new JSONObject();
+		body.Add("FacebookID", "9876");
+		body.Add("FacebookName", "Chris");
+		body.Add("FacebookPhotoURL", "http://www/1.jpg");
 		
 		HTTPClient.Instance.POST (
-			"http://unity-action.azurewebsites.net//Login",
-			param,
+			"http://unity-action.azurewebsites.net/Login",
+			body.ToString(),
 			delegate(WWW obj) {
 			JSONObject json = JSONObject.Parse(obj.text);
 			Debug.Log("Response is : " + json.ToString());
 		}
 		);
 
-	}
+	}*/
 
 	// Get Ranking list From server
 	private void GetRanking(){
 		HTTPClient.Instance.GET (
-			"http://unity-action.azurewebsites.net//Total/1/50",
-			new Dictionary<string, string>(),
+			"http://unity-action.azurewebsites.net/Total/1/50",
 			delegate(WWW obj) {
 				
 				// Dialog Push
