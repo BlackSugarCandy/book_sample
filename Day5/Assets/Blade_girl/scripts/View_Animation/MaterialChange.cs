@@ -11,7 +11,7 @@ public class MaterialChange : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		frog.renderer.material = mats[index];
+		frog.GetComponent<Renderer>().material = mats[index];
 	
 	}
 	
@@ -29,7 +29,7 @@ public class MaterialChange : MonoBehaviour {
 			if(index < 0){
 				index = mats.Length -1;
 			}
-			frog.renderer.material = mats[index];
+			frog.GetComponent<Renderer>().material = mats[index];
 		}
 		
 		if(GUI.Button(new Rect(165, 15, 30, 30), ">>")){
@@ -37,7 +37,7 @@ public class MaterialChange : MonoBehaviour {
 			if(index > mats.Length -1){
 				index = 0;
 			}
-			frog.renderer.material = mats[index];
+			frog.GetComponent<Renderer>().material = mats[index];
 		}
 		GUILayout.EndArea ();
 		

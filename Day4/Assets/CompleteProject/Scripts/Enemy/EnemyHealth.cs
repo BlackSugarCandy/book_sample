@@ -67,11 +67,11 @@ namespace CompleteProject
 		{
 			if(damaged)
 			{
-				transform.GetChild(0).renderer.material.SetColor("_OutlineColor", flashColour);
+				transform.GetChild(0).GetComponent<Renderer>().material.SetColor("_OutlineColor", flashColour);
 			}
 			else
 			{
-				transform.GetChild(0).renderer.material.SetColor("_OutlineColor", Color.Lerp (transform.GetChild(0).renderer.material.GetColor("_OutlineColor"), Color.black, flashSpeed * Time.deltaTime));
+				transform.GetChild(0).GetComponent<Renderer>().material.SetColor("_OutlineColor", Color.Lerp (transform.GetChild(0).GetComponent<Renderer>().material.GetColor("_OutlineColor"), Color.black, flashSpeed * Time.deltaTime));
 			}
 			damaged = false;
 			

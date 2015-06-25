@@ -51,7 +51,7 @@ public class EnemyHealth : MonoBehaviour {
 			
 			Vector3 diff = playerPosition - transform.position;
 			diff = diff / diff.sqrMagnitude;
-			rigidbody.AddForce((transform.position - new Vector3(diff.x,diff.y,0f))*50f*pushBack);
+			GetComponent<Rigidbody>().AddForce((transform.position - new Vector3(diff.x,diff.y,0f))*50f*pushBack);
 
 		}catch(MissingReferenceException e)
 		{
@@ -64,11 +64,11 @@ public class EnemyHealth : MonoBehaviour {
 	{
 		if(damaged)
 		{
-			transform.GetChild(0).renderer.material.SetColor("_OutlineColor", flashColour);
+			transform.GetChild(0).GetComponent<Renderer>().material.SetColor("_OutlineColor", flashColour);
 		}
 		else
 		{
-			transform.GetChild(0).renderer.material.SetColor("_OutlineColor", Color.Lerp (transform.GetChild(0).renderer.material.GetColor("_OutlineColor"), Color.black, flashSpeed * Time.deltaTime));
+			transform.GetChild(0).GetComponent<Renderer>().material.SetColor("_OutlineColor", Color.Lerp (transform.GetChild(0).GetComponent<Renderer>().material.GetColor("_OutlineColor"), Color.black, flashSpeed * Time.deltaTime));
 		}
 		damaged = false;
 		

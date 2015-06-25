@@ -5,7 +5,6 @@ public class EnemyHealth : MonoBehaviour {
 	
 	public int startingHealth = 100;
 	public int currentHealth;
-	public AudioClip deathClip;
 	
 	public float flashSpeed = 5f;
 	public Color flashColour = new Color(1f, 0f, 0f, 0.1f);
@@ -24,7 +23,6 @@ public class EnemyHealth : MonoBehaviour {
 	{
 		anim = GetComponent <Animator> ();
 		playerAudio = GetComponent <AudioSource> ();
-		//playerMovement = GetComponent <PlayerMovement> ();
 		currentHealth = startingHealth;
 	}
 
@@ -51,7 +49,7 @@ public class EnemyHealth : MonoBehaviour {
 			
 			Vector3 diff = playerPosition - transform.position;
 			diff = diff / diff.sqrMagnitude;
-			rigidbody.AddForce((transform.position - new Vector3(diff.x,diff.y,0f))*50f*pushBack);
+			GetComponent<Rigidbody>().AddForce((new Vector3(diff.x,diff.y,0f))*-10000f*pushBack);
 
 		}catch(MissingReferenceException e)
 		{
@@ -64,11 +62,11 @@ public class EnemyHealth : MonoBehaviour {
 	{
 		if(damaged)
 		{
-			transform.GetChild(0).renderer.material.SetColor("_OutlineColor", flashColour);
+			transform.GetChild(0).GetComponent<Renderer>().material.SetColor("_OutlineColor", flashColour);
 		}
 		else
 		{
-			transform.GetChild(0).renderer.material.SetColor("_OutlineColor", Color.Lerp (transform.GetChild(0).renderer.material.GetColor("_OutlineColor"), Color.black, flashSpeed * Time.deltaTime));
+			transform.GetChild(0).GetComponent<Renderer>().material.SetColor("_OutlineColor", Color.Lerp (transform.GetChild(0).GetComponent<Renderer>().material.GetColor("_OutlineColor"), Color.black, flashSpeed * Time.deltaTime));
 		}
 		damaged = false;
 		

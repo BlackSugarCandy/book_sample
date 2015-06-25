@@ -27,12 +27,7 @@ public class PlayerMovement: MonoBehaviour {
 
 		if(avatar)
 		{
-			float back = 1f;
-
-			if(v<0f) back = -1f;
-
 			avatar.SetFloat("Speed", (h*h+v*v));
-			avatar.SetFloat("Direction", back * (Mathf.Atan2(h,v) * 180.0f / 3.14159f) );
 
 		    Rigidbody rigidbody = GetComponent<Rigidbody>();
 

@@ -7,10 +7,10 @@ public class PlayerHealth : MonoBehaviour
 	public int startingHealth = 100;
 	public int currentHealth;
 	public Slider healthSlider;
-	/*public Image damageImage;
-	public AudioClip deathClip;*/
+	public Image damageImage;
+	/*public AudioClip deathClip;*/
 	public float flashSpeed = 5f;
-	public Color flashColour = new Color(1f, 0f, 0f, 0.1f);
+	public Color flashColour = new Color(1f, 0f, 0f, 100f/250f);
 	
 	Animator anim;
 	AudioSource playerAudio;
@@ -29,7 +29,7 @@ public class PlayerHealth : MonoBehaviour
 	
 	void Update ()
 	{
-		/*if(damaged)
+		if(damaged)
 		{
 			damageImage.color = flashColour;
 		}
@@ -37,7 +37,7 @@ public class PlayerHealth : MonoBehaviour
 		{
 			damageImage.color = Color.Lerp (damageImage.color, Color.clear, flashSpeed * Time.deltaTime);
 		}
-		damaged = false;*/
+		damaged = false;
 	}
 	
 
@@ -51,24 +51,22 @@ public class PlayerHealth : MonoBehaviour
 		
 		if(currentHealth <= 0 && !isDead)
 		{
-			//Death ();
+			Death ();
 		}else{
 			anim.SetTrigger("Damage");
 		}
 	}
 	
-	/*
+
 	void Death ()
 	{
 		isDead = true;
 		
 		anim.SetTrigger ("Die");
-		
-		playerAudio.clip = deathClip;
-		playerAudio.Play ();
+
 		
 		playerMovement.enabled = false;
-	}*/
+	}
 	
 	/*
 	public void RestartLevel ()

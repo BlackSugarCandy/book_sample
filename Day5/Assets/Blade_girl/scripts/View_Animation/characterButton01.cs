@@ -28,59 +28,59 @@ public class characterButton01 : MonoBehaviour {
 		GUI.Box (new Rect (0, 0, 880, 156),"");
 		
 		if (GUI.Button(new Rect(30, 20, 70, 30),"Jump01")){
-		 frog.animation.wrapMode= WrapMode.Loop;
-		  	frog.animation.CrossFade("BG_Jump01");
+		 frog.GetComponent<Animation>().wrapMode= WrapMode.Loop;
+		  	frog.GetComponent<Animation>().CrossFade("BG_Jump01");
 	  }
 		if (GUI.Button(new Rect(105, 20, 70, 30),"JumpAttack")){
-		 frog.animation.wrapMode= WrapMode.Loop;
-		  	frog.animation.CrossFade("BG_JumpAttack");
+		 frog.GetComponent<Animation>().wrapMode= WrapMode.Loop;
+		  	frog.GetComponent<Animation>().CrossFade("BG_JumpAttack");
 	  }
 
 		if (GUI.Button(new Rect(180, 20, 70, 30),"Sliding")){
-			frog.animation.wrapMode= WrapMode.Loop;
-			frog.animation.CrossFade("BG_Sliding");
+			frog.GetComponent<Animation>().wrapMode= WrapMode.Loop;
+			frog.GetComponent<Animation>().CrossFade("BG_Sliding");
 		}
 
 		if (GUI.Button(new Rect(255, 20, 70, 30),"Sleep")){
-			frog.animation.wrapMode= WrapMode.Loop;
-			frog.animation.CrossFade("BG_Sleep");
+			frog.GetComponent<Animation>().wrapMode= WrapMode.Loop;
+			frog.GetComponent<Animation>().CrossFade("BG_Sleep");
 		}
 		if (GUI.Button(new Rect(330, 20, 70, 30),"Stun")){
-			frog.animation.wrapMode= WrapMode.Loop;
-			frog.animation.CrossFade("BG_Stun");
+			frog.GetComponent<Animation>().wrapMode= WrapMode.Loop;
+			frog.GetComponent<Animation>().CrossFade("BG_Stun");
 		}
 
 
 		if (GUI.Button(new Rect(405, 20, 70, 30),"Down")){
-		 frog.animation.wrapMode= WrapMode.Once;
-		  	frog.animation.CrossFade("BG_Down");
+		 frog.GetComponent<Animation>().wrapMode= WrapMode.Once;
+		  	frog.GetComponent<Animation>().CrossFade("BG_Down");
 	  }
 
 		if (GUI.Button(new Rect(480, 20, 70, 30),"Up")){
-			frog.animation.wrapMode= WrapMode.Once;
-			frog.animation.CrossFade("BG_Up");
+			frog.GetComponent<Animation>().wrapMode= WrapMode.Once;
+			frog.GetComponent<Animation>().CrossFade("BG_Up");
 		}
 
 		if (GUI.Button(new Rect(555, 20, 70, 30),"PickUp")){
-			frog.animation.wrapMode= WrapMode.Loop;
-			frog.animation.CrossFade("BG_Pickup");
+			frog.GetComponent<Animation>().wrapMode= WrapMode.Loop;
+			frog.GetComponent<Animation>().CrossFade("BG_Pickup");
 		}
 
 		if (GUI.Button(new Rect(630, 20, 70, 30),"Damage")){
-			frog.animation.wrapMode= WrapMode.Loop;
-			frog.animation.CrossFade("BG_Damage");
+			frog.GetComponent<Animation>().wrapMode= WrapMode.Loop;
+			frog.GetComponent<Animation>().CrossFade("BG_Damage");
 		}
 
 		
 
 		if (GUI.Button(new Rect(705, 20, 70, 30),"Death")){
-			frog.animation.wrapMode= WrapMode.Loop;
-			frog.animation.CrossFade("BG_Death");
+			frog.GetComponent<Animation>().wrapMode= WrapMode.Loop;
+			frog.GetComponent<Animation>().CrossFade("BG_Death");
 		}
 
 		if (GUI.Button(new Rect(780, 20, 70, 30),"GangnamStyle")){
-			frog.animation.wrapMode= WrapMode.Loop;
-			frog.animation.CrossFade("BG_GangnamStyle");
+			frog.GetComponent<Animation>().wrapMode= WrapMode.Loop;
+			frog.GetComponent<Animation>().CrossFade("BG_GangnamStyle");
 		}
 
 		//--------------------------------------------------------------
@@ -102,8 +102,8 @@ public class characterButton01 : MonoBehaviour {
 
 	    
 				if (GUI.Button (new Rect (20, 580, 140, 40), "Ver 2.6")) {
-						frog.animation.wrapMode = WrapMode.Loop;
-						frog.animation.CrossFade ("BG_Idle");
+						frog.GetComponent<Animation>().wrapMode = WrapMode.Loop;
+						frog.GetComponent<Animation>().CrossFade ("BG_Idle");
 				}
 
 	

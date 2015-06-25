@@ -1,0 +1,17 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Controller/TouchPad.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Controller/TouchPad.cs" Line="72" Column="42" />
+      <File FileName="Assets/CompleteProject/Scripts/Chracter/PlayerMovement.cs" Line="10" Column="2" />
+      <File FileName="Assets/Scripts/Player/PlayerHealth.cs" Line="29" Column="2" />
+      <File FileName="Assets/Scripts/Enemy/EnemyHealth.cs" Line="16" Column="1" />
+      <File FileName="Assets/Scripts/Player/Effect.cs" Line="20" Column="4" />
+      <File FileName="Assets/Scripts/Controller/FollowingCamera.cs" Line="19" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

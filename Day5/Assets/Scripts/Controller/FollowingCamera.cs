@@ -12,7 +12,8 @@ public class FollowingCamera : MonoBehaviour
 	
 	void LateUpdate ()
 	{
-
-		transform.position = follow.position + Vector3.up * distanceUp - Vector3.forward * distanceAway;
+		//float random = Random.Range(0f,0.3f);
+		//float random_forward = Random.Range(0f,1f);
+		transform.position = follow.position + Vector3.up * distanceUp  - Vector3.forward * distanceAway;
 	}
 }
